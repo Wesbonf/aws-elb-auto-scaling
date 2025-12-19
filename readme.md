@@ -62,3 +62,30 @@ O grupo de destino é responsável por:
 
 #### Resumo da configuração
 ![Resumo da configuração](images/4.PNG)
+
+
+## 3️⃣ Criação do Application Load Balancer (ELB)
+
+Foi configurado um **Application Load Balancer (ALB)** para distribuir o tráfego HTTP entre as instâncias EC2.
+
+### 🖼️ Visão geral
+![Application Load Balancer](images/5.PNG)
+
+### 📌 Configurações
+- **Nome:** LabELB  
+- **Tipo:** Internet-facing  
+- **VPC:** Lab VPC  
+- **Sub-redes:**  
+  - Sub-rede pública 1  
+  - Sub-rede pública 2  
+
+
+![Configurações](images/6.PNG)  
+![Configurações](images/7.PNG)
+
+### 🔐 Segurança e Listener
+- **Grupo de segurança:** Web Security Group  
+- **Listener:** HTTP (porta 80)  
+- **Ação padrão:** Encaminhar para o grupo de destino `LabGroup`  
+
+![Segurança](images/8.PNG)
