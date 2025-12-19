@@ -89,3 +89,27 @@ Foi configurado um **Application Load Balancer (ALB)** para distribuir o tráfeg
 - **Ação padrão:** Encaminhar para o grupo de destino `LabGroup`  
 
 ![Segurança](images/8.PNG)
+
+
+## 4️⃣ Criação do Launch Template
+
+Foi criado um **Launch Template** para padronizar as instâncias do Auto Scaling.
+
+### Configurações
+- **Nome:** LabConfig  
+
+![Nome](images/12.PNG)
+
+- **AMI:** WebServerAMI  
+- **Tipo de instância:** t2.micro  
+
+![AMI, tipo de instância e par de chaves](images/10.PNG)
+
+- **Par de chaves:** vockey  
+- **Grupo de segurança:** Web Security Group  
+
+![Par de chaves e grupo de segurança](images/11.PNG)
+
+- **Monitoramento detalhado do CloudWatch:** habilitado  
+
+![CloudWatch](images/9.PNG)
