@@ -29,4 +29,14 @@ O ELB recebe o tráfego da internet e o distribui entre as instâncias EC2, enqu
 
 ## 1️⃣ Criação da AMI para Auto Scaling
 
+### 📌 Detalhes da AMI
+- **Nome da AMI:** WebServerAMI  
+- **Descrição:** Lab AMI for Web Server  
+
+### ℹ️ Observação
+Essa AMI foi utilizada posteriormente pelo **Auto Scaling Group** para criar novas instâncias automaticamente.
+
+### 🖼️ Evidência
+![Criação da AMI](images/1.PNG)
+
 
