@@ -36,7 +36,29 @@ O ELB recebe o tráfego da internet e o distribui entre as instâncias EC2, enqu
 ### ℹ️ Observação
 Essa AMI foi utilizada posteriormente pelo **Auto Scaling Group** para criar novas instâncias automaticamente.
 
-### 🖼️ Evidência
 ![Criação da AMI](images/1.PNG)
 
+---
+## 2️⃣ Criação do Grupo de Destino
 
+Foi criado um **Target Group** para definir o destino do tráfego encaminhado pelo **Load Balancer**.
+
+### 📌 Configurações
+- **Nome:** LabGroup  
+- **Tipo de destino:** Instâncias  
+- **VPC:** Lab VPC  
+
+### ℹ️ Função do Target Group
+O grupo de destino é responsável por:
+- Realizar **health checks**  
+- Encaminhar o tráfego apenas para **instâncias saudáveis**
+
+
+#### Nome e tipo de destino
+![Nome e tipo de instância](images/2.PNG)
+
+#### VPC associada
+![VPC](images/3.PNG)
+
+#### Resumo da configuração
+![Resumo da configuração](images/4.PNG)
