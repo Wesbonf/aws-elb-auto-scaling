@@ -113,3 +113,45 @@ Foi criado um **Launch Template** para padronizar as instâncias do Auto Scaling
 - **Monitoramento detalhado do CloudWatch:** habilitado  
 
 ![CloudWatch](images/9.PNG)
+
+
+## 5️⃣ Criação do Auto Scaling Group
+
+O **Auto Scaling Group** foi criado utilizando o Launch Template configurado anteriormente.
+
+### Configurações Gerais
+
+- **Nome:** Lab Auto Scaling Group  
+- **VPC:** Lab VPC  
+- **Sub-redes:**  
+  - Sub-rede privada 1  
+  - Sub-rede privada 2  
+
+  ![Nome](images/13.PNG)
+  ![VPC e sub-redes](images/14.PNG)
+
+### Capacidade
+
+- **Capacidade desejada:** 2  
+- **Capacidade mínima:** 2  
+- **Capacidade máxima:** 6  
+![Capacidades](images/15.PNG)
+
+
+### Política de Escalabilidade
+
+- **Nome:** LabScalingPolicy  
+- **Métrica:** Utilização média da CPU  
+- **Valor alvo:** 60%  
+
+![escalabilidade](images/16.png)
+
+O Auto Scaling ajusta automaticamente o número de instâncias para manter a CPU média próxima ao valor definido.
+
+
+### Balanceamento e Métricas
+
+- **Load Balancer:** LabELB  
+- **Target Group:** LabGroup  
+- **Coleta de métricas do grupo:** habilitada  
+
